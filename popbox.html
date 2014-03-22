@@ -4,10 +4,39 @@
    <HEAD>
       <TITLE>Popbox | Home</TITLE>
       <META NAME="description" CONTENT="Popbox Project Page Author: Linus Chang">
-      <LINK href="calendar.css" rel="stylesheet" type="text/css">
+      <LINK href="css/popbox.css" rel="stylesheet" type="text/css">
    </HEAD>
-   <BODY>
-	<H1>Popbox</H1>
-   		<script type="text/javascript" src="popbox.js"></script>
-   </BODY>
+   <body>
+	<div id=overview>
+	<h1> Overview </h1>
+	<center><h2>"To understand the dynamics of childhood obesity </br>
+	and develop a digital experience that engages </br> 
+	children in healthier behaviors, empowering them to be  </br> 
+	agents of change in their communities."</h2></center>
+	</div>
+	<div id=team><h1>Team</h1></div>
+	<div id=research><h1>Research</h1></div>
+	<div id=design><h1>Design</h1></div>
+	
+	<script type="text/javascript" src="js/popbox.js"></script>
+	
+	<script type="text/javascript" src="js/skrollr.min.js"></script>
+
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="js/skrollr.ie.min.js"></script>
+	<![endif]-->
+
+	<script type="text/javascript">
+	var s = skrollr.init({
+		edgeStrategy: 'set',
+		easing: {
+			WTF: Math.random,
+			inverted: function(p) {
+				return 1-p;
+			}
+		}
+	});
+	</script>
+</body>
+
 </HTML>
