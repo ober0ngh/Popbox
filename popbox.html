@@ -5,18 +5,30 @@
 <TITLE>Popbox | Home</TITLE>
 <META NAME="description"
 	CONTENT="Popbox Project Page Author: Linus Chang">
+	<LINK href="css/bootstrap.css" rel="stylesheet" type="text/css">
 <LINK href="css/popbox.css" rel="stylesheet" type="text/css">
+
 </HEAD>
 <body>
 	<a name="home"></a>
 	<!-- Menu -->
 	<center>
 	<div id="header">
-		<span><a href="#overview">Overview</a></span> 
+	
+<!--	<ul class="nav nav-pills">
+	<li><a href="#overview">Overview</a></li>
+	<li><a href="#team">Team</a></li>
+	<li><a href="#home"><img src="img/justLogo.png" width="100px" align= "middle"></a></li>
+	<li><a href="#research">Research</a></li>
+	<li><a href="#design">Design</li>
+	
+	</ul>-->
+	
+		<span><a href="#project_description">Overview</a></span> 
 		<span><a href="#team">Team</a></span> 
 		<span><a href="#home"><img src="img/justLogo.png" width="100px" align="middle"></a></span>
 		<span><a href="#research">Research</a></span> 
-		<span><a href="#design">Design</a></span>
+		<span><a href="#design">Design</a></span> 
 	</div>
 	</center>
 	
@@ -74,7 +86,7 @@
 					</center>
 			<span class=team_description>
 			<center>
-				<img src="img/Nikhil_Face.png"> <br> 
+				<img src="img/Nikhil_Face.png" onmouseover="changeimage(this)" onmouseout="revertimage(this)"> <br> 
 				<span class=name><b>Nikhil Popat</b></span>
 				<h2>Research Lead</h2>
 			</center>
@@ -87,7 +99,7 @@
 			</span>
 			<span class=team_description>
 			<center>
-				<img src="img/Barath_Face.png"> <br> 
+				<img src="img/Barath_Face.png" onmouseover="changeimage(this)" onmouseout="revertimage(this)"> <br> 
 				<span class=name><b>Barath Jawahar</b></span>
 				<h2>UX Lead</h2>
 			</center>
@@ -99,7 +111,7 @@
 			</span>
 			<span class=team_description>
 				<center>
-					<img src="img/Caroline_Face.png"> <br>
+					<img src="img/Caroline_Face.png" onmouseover="changeimage(this)" onmouseout="revertimage(this)"> <br>
 					<span class=name><b>Caroline Record</b></span>
 					<h2>Project Lead</h2>
 				</center>
@@ -109,7 +121,7 @@
 				</p>
 			</span>
 			<span class=team_description>
-				<center><img src="img/Montse_Face.png"> <br>
+				<center><img src="img/Montse_Face.png" onmouseover="changeimage(this)" onmouseout="revertimage(this)"> <br>
 					<span class=name><b>Montse Lobos</b></span>
 					<h2>Design Lead</h2>
 					</center>
@@ -122,7 +134,7 @@
 				</p>
 			</span>
 			<span class=team_description>
-				<center><img src="img/Linus_Face.png"> <br>
+				<center><img src="img/Linus_Face.png" onmouseover="changeimage(this)" onmouseout="revertimage(this)"> <br>
 					<span class=name><b>Linus Chang</b></span>
 					<h2>Tech Lead</h2>
 					</center>
@@ -236,7 +248,9 @@
 		<center><h1>Design Process</h1></center>
 	</div>
 
-	<script type="text/javascript" src="js/popbox.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+				
 
 	<script type="text/javascript" src="js/skrollr.min.js"></script>
 
@@ -254,6 +268,65 @@
 			}
 		}
 	});
+	
+	function changeimage(x)
+	{
+		x.src = x.src.slice(0 , x.src.length -4) + "1.png";
+		//x.src  = "img/Nikhil" + x.src.slice(59);
+	}
+
+	function revertimage(x)
+	{
+		x.src = x.src.slice(0 , x.src.length -5) + ".png"; 
+	}
+	
+	// Cache selectors
+var lastId,
+    header = $("#header"),
+    headerHeight = header.outerHeight(),
+    // All list items
+    headerItems = header.find("a"),
+    // Anchors corresponding to menu items
+    scrollItems = headerItems.map(function(){
+      var item = $($(this).attr("href"));
+      if (item.length) { return item; }
+    });
+
+// Bind click handler to menu items
+// so we can get scroll animation
+headerItems.click(function(e){
+  var href = $(this).attr("href"),
+      offsetTop = href === "#" ? 0 : $(href).offset().top-headerHeight+1;
+  $('html, body').stop().animate({ 
+      scrollTop: offsetTop
+  }, 300);
+  e.preventDefault();
+});
+
+// Bind to scroll
+$(window).scroll(function(){
+   // Get container scroll position
+   var fromTop = $(this).scrollTop()+headerHeight;
+   
+   // Get id of current scroll item
+   var cur = scrollItems.map(function(){
+     if ($(this).offset().top < fromTop)
+       return this;
+   });
+   // Get the id of the current element
+   cur = cur[cur.length-1];
+   var id = cur && cur.length ? cur[0].id : "";
+   
+   if (lastId !== id) {
+       lastId = id;
+       // Set/remove active class
+       headerItems
+         .parent().removeClass("active")
+         .end().filter("[href=#"+id+"]").parent().addClass("active");
+   }                   
+});
+	
+	
 	</script>
 </body>
 
