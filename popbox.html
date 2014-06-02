@@ -10,7 +10,7 @@
 
 </HEAD>
 <body>
-	<a name="home"></a>
+	<a name="title"></a>
 	<!-- Menu -->
 	<center>
 	<div id="header">
@@ -26,23 +26,22 @@
 	
 		<span><a href="#project_description">Project</a></span> 
 		<span><a href="#team">Team</a></span> 
-		<span><a href="#home"><img src="img/justLogo.png" width="100px" align="middle"></a></span>
+		<span><a href="#home"><img id=header_logo src="img/justLogo.png" width="100px" align="middle"></a></span>
 		<span><a href="#research">Research</a></span> 
 		<span><a href="#design">Design</a></span> 
 	</div>
 	</center>
 	
-	<div id=home>
+	<div id='title'>
 		<center>
 			<img src="img/Popbox_Logo.png" width="300px">
-			<div id=words>"Out of the box thinking for a healthier
-				lifestyle."</div>
+			<div id="words">"Out of the box thinking for a healthier lifestyle."</div>
 		</center>
 	</div>
 	
-	<div id=project_description>
+	<div id="project_description">
 		<!-- <h1> Overview </h1>  ci-lightbulb.png-->
-			<div id=project_description_words>
+			<div id="project_description_words">
 				<center><h1>Project</h1></center>
 				<h2>About the Project</h2> 
 				<p> Team Popbox is a group of five masters
@@ -68,7 +67,7 @@
 			</div>
 	</div>
 	
-	<div id=overview>
+	<div id="overview">
 		<!-- <h1> Overview </h1>  ci-lightbulb.png-->
 		<center>
 			<img src="img/ci-lightbulb.png" width="200px">
@@ -80,7 +79,7 @@
 		</center>
 	</div>
 	<a name="team"></a>
-	<div id=team>
+	<div id="team">
 		<center>
 			<h1>The Team</h1>
 					</center>
@@ -148,8 +147,8 @@
 
 	</div>
 	<a name="research"></a>
-	<div id=research_intro>
-		<div id=research_intro_description>
+	<div id="research_intro">
+		<div id="research_intro_description">
 		<center><h1>Research</h1></center>
 		<p>We conducted an extensive literature review and interviewed an
 			assortment of weight management <b>experts</b>, which suggested that a
@@ -165,9 +164,9 @@
 			day in their lives.</p>
 		</div>
 	</div>
-	<div id=research>
+	<div id="research">
 
-		<div id=literature_review>
+		<div id="literature_review">
 			<img src="img/Popbox_LitReview_Circle_35.png" width="250px" align="left">
 			<div class=research_words>
 				<h1>Literature Review</h1>
@@ -183,7 +182,7 @@
 			</div>
 		</div>
 		<br>
-		<div id=competitive_analysis>
+		<div id="competitive_analysis">
 			<img src="img/Popbox_CompAnalysis_Circle_50.png" width="250px"
 				align="left">
 			<div class=research_words>
@@ -198,7 +197,7 @@
 			</div>
 		</div>
 	</div>
-	<div id=interviews>
+	<div id="interviews">
 		<span class="interview_div">
 			<center>
 				<img class="interview" src="img/expert_circle.png" width="300px">
@@ -244,7 +243,7 @@
 		</span>
 	</div>
 	<a name="design"></a>
-	<div id=design>
+	<div id="design">
 		<center><h1>Design Process</h1></center>
 	</div>
 
@@ -317,12 +316,21 @@ $(window).scroll(function(){
    cur = cur[cur.length-1];
    var id = cur && cur.length ? cur[0].id : "";
    
+   //console.log(id);
+	if ((id == "title") || (id == "")) {
+	   //window.alert(id);
+	   $('#header_logo').css('visibility', 'hidden'); 
+	} else {
+	   	$('#header_logo').css('visibility', 'visible'); 
+	}
+   
    if (lastId !== id) {
        lastId = id;
        // Set/remove active class
        headerItems
          .parent().removeClass("active")
          .end().filter("[href=#"+id+"]").parent().addClass("active");
+       
    }                   
 });
 	
