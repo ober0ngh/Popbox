@@ -27,12 +27,12 @@
 		<span><a href="#project_description">Overview</a></span> 
 		<span><a href="#team">Team</a></span> 
 		<span><a href="#home"><img src="img/justLogo.png" width="100px" align="middle"></a></span>
-		<span><a href="#research">Research</a></span> 
+		<span><a href="#research_intro">Research</a></span> 
 		<span><a href="#design">Design</a></span> 
 	</div>
 	</center>
 	
-	<div id=home>
+	<div id=title>
 		<center>
 			<img src="img/Popbox_Logo.png" width="300px">
 			<div id=words>"Out of the box thinking for a healthier
@@ -147,7 +147,6 @@
 			</span>
 
 	</div>
-	<a name="research"></a>
 	<div id=research_intro>
 		<div id=research_intro_description>
 		<center><h1>Research</h1></center>
@@ -295,8 +294,11 @@ var lastId,
 // Bind click handler to menu items
 // so we can get scroll animation
 headerItems.click(function(e){
-  var href = $(this).attr("href"),
-      offsetTop = href === "#" ? 0 : $(href).offset().top-headerHeight+1;
+  var href = $(this).attr("href");
+  if(typeof $(href).offset() != 'undefined')
+   offsetTop = href === "#" ? 0 : $(href).offset().top-headerHeight+1;
+   else
+   offsetTop=1;
   $('html, body').stop().animate({ 
       scrollTop: offsetTop
   }, 300);
@@ -310,19 +312,23 @@ $(window).scroll(function(){
    
    // Get id of current scroll item
    var cur = scrollItems.map(function(){
-     if ($(this).offset().top < fromTop)
-       return this;
+     if ($(this).offset().top < fromTop){
+       //console.log(this);
+	   return this;
+	   }
    });
    // Get the id of the current element
    cur = cur[cur.length-1];
    var id = cur && cur.length ? cur[0].id : "";
    
    if (lastId !== id) {
-       lastId = id;
+	
+   lastId = id;
        // Set/remove active class
        headerItems
          .parent().removeClass("active")
          .end().filter("[href=#"+id+"]").parent().addClass("active");
+		 //alert(id);
    }                   
 });
 	
