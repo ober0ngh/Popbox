@@ -30,13 +30,13 @@ body {
 }
 
 #header span.active a {
-    color: #333;
+    color: gray;
 }
 
 #header a:link {color:white; text-decoration:none;}
 #header a:visited {color:white; text-decoration:none;}
-#header a:hover {color:#333;}
-#header a:active {color:#333;}
+#header a:hover {color:gray;}
+#header a:active {color:gray;}
 
 #header span {
 	display: inline-block;
@@ -131,17 +131,25 @@ body {
 #team h1 {
 	font-size: 60px;
 	color: #6FB4B7;
+	margin-top: 120px;
 	margin-bottom: 20px;
 }
 
-#team h2 {
+#team h3 {
 	color: #6FB4B7;
 	margin-bottom: -5px;
 }
 
 .name {
-	font-size: 20px;
+	font-size: 18px;
+	color:gray;
 }
+
+
+a.name_link:link {color:gray; text-decoration:none;}
+a.name_link:visited {color:gray; text-decoration:none;}
+a.name_link:hover {color:#333; text-decoration:none;}
+a.name_link:active {color:#333; text-decoration:none;}
 
 #research_intro {
 	background-color: #6FB4B7;
