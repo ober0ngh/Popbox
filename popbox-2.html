@@ -7,7 +7,8 @@
 	CONTENT="Popbox Project Page Author: Linus Chang">
 <LINK href="css/bootstrap.css" rel="stylesheet" type="text/css">
 <LINK href="css/popbox2.css" rel="stylesheet" type="text/css">
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+<!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>-->
+<link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
 
 </HEAD>
 <body>
@@ -15,19 +16,22 @@
 	<!-- Menu -->
 	
 	<center>
-		<div id="header">
-	
-			<div class="nav">
-				<span><a href="#goal">Goal</a></span> 
-				<span><a href="#project_description">Project</a></span> 
-				<span><a href="#team">Team</a></span> 
-				<span><a href="#home"><img id=header_logo src="img/justLogo.png" width="100px" align="middle"></a></span>
-				<span><a href="#research_intro">Background Research</a></span> 
-				<span><a href="#field-research">Field Research</a></span>
-				<span><a href="#design">Design</a></span> 
-				
+		<nav id="header" class="navbar">
+			<div class="container-fluid">
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-pills">
+						<li><a href="#goal">Goal</a></li> 
+						<li><a href="#project_description">Project</a></li> 
+						<li><a href="#team">Team</a></li> 
+						<li><a href="#home"><img id=header_logo src="img/justLogo.png" width="100px" align="middle"></a></li>
+						<li><a href="#research_intro">Research</a></li> 
+						<li><a href="#synthesis">Synthesis</a></li> 
+						
+					</ul>
+					
+				</div>
 			</div>
-		</div>
+		</nav>
 
 	</center>
 	
@@ -36,16 +40,19 @@
 	<div class="jumbotron title fullheight">
 		<center>
 			<img src="img/Popbox_Logo.png" width="300px"/>
-			<h3 class="">"Out of the box thinking for a healthier lifestyle."</h3>
+			<h3 class="">Out of the box thinking for a healthier lifestyle.</h3>
 		</center>
 	</div>
-	<div id="goal" class="jumbotron fullheight teal">
+
+<!--GOAL-->
+
+	<div id="goal" class="jumbotron fullheight ">
 		<!-- <h1> Overview </h1>  ci-lightbulb.png-->
-		<div class="container">
+		<div class="fullwidth goal">
 			
 				
 				<div class='col-md-8 col-md-offset-2'>
-					
+					<h2>Our Goal</h2> 
 					<em>
 						Our goal is to understand the dynamics of childhood obesity and develop a
 						digital experience that engages children in healthier behaviors,
@@ -58,203 +65,232 @@
 		</div>
 	</div>
 
-	<div id="project_description" class="jumbotron fullheight">
+<!--PROJECT-->
+
+	<div id="project_description" class="jumbotron fullheight darkteal">
 		<!-- <h1> Overview </h1>  ci-lightbulb.png-->
-			<div class="container">
-				<div class="jumbotron">
+			
+			<div class="">
+				<div class="container">
+					<div class="col-md-10 col-md-offset-1 colorWhite">
 					<h2>About the Project</h2> 
-					<p> We are a group of five masters
-						students in the Human-Computer Interaction Institute at Carnegie
-						Mellon University. <!--Each team member has a unique skillset and set
-						of experiences that guides their approach to user-centered research
-						and design.--> We are currently engaged in an 8-month capstone
-						project, which represents the culmination of our studies at
-						Carnegie Mellon University. During this 8-month period, we
-						research, design, and develop a conceptual prototype for an
-						industry sponsor. We are currently working with Panasonic R&amp;D on a
-						solution that will help address the growing childhood obesity
-						epidemic. 
+					<h3>Our Client </h3> 
+					<p> Panasonic is a multinational consumer electronics organization headquartered in Japan. While known as a consumer electronics giant, Panasonic is also involved in many other enterprises. The company recently developed technology to help senior citizens afflicted with Alzheimer’s disease. Now, Panasonic wishes to develop similar technologies to promote the well-being of other populations. 
 					</p>
-					<!-- not necessary? <h2> Project Overview </h2> 
-					<p> Team Popbox practices a user-centered
-						research approach with a strong focus on field work. However, we
-						first reviewed the vast body of existing literature on childhood
-						obesity to ensure that our field work was actually exploring new
-						ground and was conducted in a manner sensitive to the social stigma
-						surrounding childhood obesity.
-					</p>-->
+					<h3>Our role</h3>
+					<p>We are Popbox, a team of User Experience Designers and Researchers. We are working with Panasonic to develop technology that engages children in healthier long-term behaviors.  By encouraging active play and healthy choices, we hope to combat the childhood obesity epidemic. 
+					</p>
+				</div>
 				</div>
 			</div>
 	</div>
-	
-	<div id="team" class="container">
+
+<!--TEAM-->
+
+	<div id="team" class="jumbotron fullheight">
+		<div class="container v-center">
 		
-			<h1>The Team</h1>
-					
-			<div class="team_description col-xs-6 col-sm-2">
+			<h2>The Team</h2>
+			<div class= "row">	
 			
-				<img src="img/Nikhil_Face.png" onmouseover="changeimage(this)" onmouseout="revertimage(this)"> <br> 
-				<span class=name><b>Nikhil Popat</b></span>
-				<h2>Research Lead</h2>
+			
+				
+				<div class="team_description col-xs-6 col-md-2 col-md-offset-2">
+				
+					<a href="http://www.nikhilpopat.com" class=name_link>
+						<img src="img/Nikhil_Face.png" onmouseover="changeimage(this)" onmouseout="revertimage(this)">  
+						<h3>Nikhil Popat</h3>
+						<span class=name>Research Lead</span>
+					</a>
+					
+		
+				</div>
+				<div class="team_description col-xs-6 col-md-2">
+					<a href="http://www.barathcj.me" class=name_link>
+
+						<img src="img/Barath_Face.png" onmouseover="changeimage(this)" onmouseout="revertimage(this)"> 
+						<h3>Barath Jawahar </h3>
+						<span class=name>UX Lead</span>
+						<br/>
+					</a>
+				</div>
+				<div class="team_description col-xs-6 col-md-2">
+					
+						<a href="http://www.carolinerecord.com" class=name_link>
+							<img src="img/Caroline_Face.png" onmouseover="changeimage(this)" onmouseout="revertimage(this)">
+							<h3>Caroline Record</h3>
+							<span class=name> Project Lead </span>
+						</a>
+						
+						
+				
+				</div>
+				<div class="team_description col-xs-6 col-md-2">
+					<a href="http://montselobos.com" class=name_link>
+						<img src="img/Montse_Face.png" onmouseover="changeimage(this)" onmouseout="revertimage(this)">
+						<h3>Montse Lobos</h3>
+						<span class=name>Design lead</span>
+						<br/>
+					</a>
+				</div>
+				<div class="team_description col-xs-6 col-md-2">
+					<img src="img/Linus_Face.png" onmouseover="changeimage(this)" onmouseout="revertimage(this)">
+						<h3>Linus Chang</h3>
+						<span class=name>Tech Lead</span>
+						
+				</div>
+			</div>	
+		</div>
+
+	</div>
 	
-				<p>Nikhil’s undergraduate
-					background is in Political Science. His passion lies in exploring
-					novel new ways to bring great design and compelling technology
-					together to enhance everyday life. He enjoy playing tennis,
-					re-watching Battlestar Galactica (2003), and having a good laugh.
-				</p>
+<!--RESEARCH-->
+	
+	<div id="research_intro" class="jumbotron fullheight newspaper">
+		<div class="jumbotron">
+			<div class="container">
+				<div class="row">
+					<div class="x col-md-8 col-md-offset-2">
+						<h2>Research</h2><br/>
+						<p>Our human-centered research process took place over the span of three months and involved both Domain Research &amp; Field Research. This allowed us:
+							<ol>
+								<li>To take advantage of the years of cumulative knowledge generated by academics and nutrition, fitness, and medical experts</li> 
+								<li>To get a first-hand understanding of the day-to-day negotiation that occurs between parents and children when pursuing and maintaining healthy lifestyle choices.
+								</li>
+							</ol>
+						</p>
+					</div>	
+				</div>	
+				<div class="row">
+					<br/>
+					<div id="domainR"class="researchBox details">
+						<div class="row centerLine">
+							<div class="col-md-5 col-sm-8 alignRight">
+								<h3 class="light-title">
+								Domain Research
+								</h3>
+								<p>Our domain research suggested that engaging children in healthier behaviors is far more successful when a child’s caretakers are involved.
+								</p>
+							</div>
+							<div class="col-md-2 col-sm-4">
+								<div class='circle '>
+									1
+								</div>	
+								
+							</div>
+						</div>
+						<div class="row centerLine">
+							<div class="col-md-2 col-sm-4 col-md-offset-5 ">
+								<div class='circle littleCircle '>
+									<img src='img/sprites/book-s.png'/>
+								</div>	
+								
+							</div>
+							<div class="col-md-5 col-sm-8 alignLeft ">
+								<h4> Literature review</h4>
+								<span>70+ articles reviewed</span>
+								<ul>
+									<li>Prevention and Treatment of Childhood Obesity </li> 
+									<li>Designing for Behavioral Change</li>
+									<li> Child Development</li>
+								</ul>
+							
+								
+							</div>
+						</div>	
+						<div class="row centerLine">
+							<div class="col-md-2 col-sm-4 col-md-offset-5 ">
+								<div class='circle littleCircle '>
+									<img src='img/sprites/competitive.png'/>
+								</div>	
+								
+							</div>
+							<div class="col-md-5 col-sm-8 alignLeft ">
+								<h4> Competitive Analysis</h4>
+								<span>50+ competitors reviewed</span>
+								<p>To understand the breadth of solutions that existed to promote proper fitness and nutrition and assess their suitability for children</p>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>	
+				</div>
 			</div>
-			<div class="team_description col-xs-6 col-sm-2">
-			
-				<img src="img/Barath_Face.png" onmouseover="changeimage(this)" onmouseout="revertimage(this)"> <br> 
-				<span class=name><b>Barath Jawahar</b></span>
-				<h2>UX Lead</h2>
-			
-				<p>Barath’s undergraduate background is
-					in electrical engineering. He previously worked at Samsung as a
-					software engineer. Barath loves playing soccer, travelling, and
-					meeting new people.
-				</p>
-			</div>
-			<div class="team_description col-xs-6 col-sm-2">
-				
-					<img src="img/Caroline_Face.png" onmouseover="changeimage(this)" onmouseout="revertimage(this)"> <br>
-					<span class=name><b>Caroline Record</b></span>
-					<h2>Project Lead</h2>
-				
-				<p> Caroline’s undergraduate
-					background is in the Fine Arts. She is an exhibiting media artist,
-					a passionate student leader, and lover of Latin dance.
-				</p>
-			</div>
-			<div class="team_description col-xs-6 col-sm-2">
-				<img src="img/Montse_Face.png" onmouseover="changeimage(this)" onmouseout="revertimage(this)"> <br>
-					<span class=name><b>Montse Lobos</b></span>
-					<h2>Design Lead</h2>
-					
-					<p>Montse is a graphic designer and
-					front end developer with seven years of professional experience.
-					She previously worked as the Design lead at Ciudadano Intelligente,
-					a Chilean non-governmental organization. Montse’s undergraduate
-					design thesis focused on an an Attention Enhancer prototype for
-					children with a specific language impairment.
-				</p>
-			</div>
-			<div class="team_description col-xs-6 col-sm-2">
-				<img src="img/Linus_Face.png" onmouseover="changeimage(this)" onmouseout="revertimage(this)"> <br>
-					<span class=name><b>Linus Chang</b></span>
-					<h2>Tech Lead</h2>
-					
-				<p>Linus pursued his undergraduate
-					education at UC Berkeley as a Cognitive Science Major. He has over
-					eight years of professional software engineering experience and
-					previously worked at Lockheed Martin Corporation and Sun
-					Microsystems. He is an avid climber and certified diver.
-				</p>
-			</div>
-
+		</div>	
 	</div>
+	</div>
+	<!-- field -->
+		<div class="jumbotron fullheight" style="padding-top:0;">
+			<div class="jumbotron researchBoxDark darkteal">
+				<div class="container details">
+					<div class="row centerLine">
+						<div class="col-md-5 col-sm-8 alignRight">
+							<h3 class="light-title">
+							Field Research
+							</h3>
+							<p>To understand how caretakers encouraged or discouraged children to engage in healthy lifestyle choices, we used a variety of research techniques. 
+							</p>
+							<!--PASSIVE VOICE-->
+						</div>
+						<div class="col-md-2 col-sm-4">
+							<div class='circle '>
+								2
+							</div>	
+							
+						</div>
+					</div>
+					<div class="row centerLine">
+						<div class="col-md-2 col-sm-4 col-md-offset-5 ">
+							<div class='circle littleCircle '>
+								<img src=''/>
+							</div>	
+							
+						</div>
+						<div class="col-md-5 col-sm-8 alignLeft ">
+							<h4> Expert Interviews</h4>
+							<span>14 Experts interviewed</span>
+							<p>We reached out to experts to learn about different types of healthy lifestyle strategies and common pitfalls families face when pursuing these strategies. Experts included program organizers, fitness and nutrition professionals, weight-loss experts, food policy experts, and family physicians.</p>
+							</ul>
+						</div>
+					</div>
+					<div class="row centerLine">
+						<div class="col-md-2 col-sm-4 col-md-offset-5 ">
+							<div class='circle littleCircle '>
+								<img src=''/>
+							</div>	
+							
+						</div>
+						<div class="col-md-5 col-sm-8 alignLeft ">
+							<h4> Family Storutelling Sessions</h4>
+							<span>07 Families </span>
+							<p>We created a series of activities that allowed families to share the day-to-day choices they made surrounding nutrition and fitness. We held these sessions in family’s homes, when possible, and at our facilities on campus. In each setting, we provided children with a variety of creative materials (crayons, play-doh, markers, stickers) to promote an environment where both parents and children felt safe sharing their stories with us. </p>
+							</ul>
+						</div>
+					</div>
+					<div class="row centerLine">
+						<div class="col-md-2 col-sm-4 col-md-offset-5 ">
+							<div class='circle littleCircle '>
+								<img src=''/>
+							</div>	
+							
+						</div>
+						<div class="col-md-5 col-sm-8 alignLeft ">
+							<h4> Guerrilla Observations</h4>
+							<span>30+ hours of observation</span>
+							<p>To understand a family’s needs in context, we conducted guerrilla observations. Each “guerrilla observation” involved traveling to different environments often frequented by caretakers and their children. These observations allowed us to understand how different environments can either support or disrupt a family’s commitment to healthy lifestyles. </p>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
 
-	<a name="research"></a>
-	<div id="research_intro">
-		<div id="research_intro_description">
-		<center><h1>Research</h1></center>
-		<p>We conducted an extensive literature review and interviewed an
-			assortment of weight management <b>experts</b>, which suggested that a
-			<b>family</b>-centered approach was most effective in addressing childhood
-			obesity. Our focus on families centered primarily on how parents
-			communicated healthy lifestyle choices to their <b>children</b> (ages 6-9).
+	
+	<div id="synthesis" class="jumbotron fullheight">
+		<h1>Synthesis</h1>
+		<p>After conducting our domain and field research, we synthesized this data using a variety of data modeling activities including: affinity diagrams, joint storytelling sessions, and user experience journey maps. 
 		</p>
-		<p>
-			To understand this problem space we employed a variety of field
-			research techniques. We conducted <b>interviews</b> with parents of young
-			children, <b>home-visits</b>, and family-<b>storytelling</b> sessions designed to
-			allow both parents and children to jointly walk us through a typical
-			day in their lives.</p>
-		</div>
 	</div>
-	<div id="research">
-
-		<div id="literature_review">
-			<img src="img/Popbox_LitReview_Circle_35.png" width="250px" align="left">
-			<div class=research_words>
-				<h1>Literature Review</h1>
-				<p>Our literature review was particularly important to our
-					research process given the wide body of research already available
-					on childhood obesity. We conducted an exhaustive review of over
-					fifty research papers on the subject in order to gain an in-depth
-					understanding of the problem space. This review enabled us to
-					familiarize ourselves with existing treatments for childhood
-					obesity as well as ensure that our fieldwork was focused on
-					answering questions that had not been adequately addressed by
-					existing literature.</p>
-			</div>
-		</div>
-		<br>
-		<div id="competitive_analysis">
-			<img src="img/Popbox_CompAnalysis_Circle_50.png" width="250px"
-				align="left">
-			<div class=research_words>
-				<h1>Competitive Landscape</h1>
-				<p>Our literature review indicated that there was a wide variety
-					of existing solutions designed to combat obesity, and even more so
-					that addressed the idea of weight management and personal fitness
-					in general. To understand the breadth of existing solutions we
-					conducted a competitive analysis of these solutions, dividing these
-					competitors into the following categories: exercise, information,
-					dieting, communication, and game-centered solutions.</p>
-			</div>
-		</div>
-	</div>
-	<div id="interviews">
-		<span class="interview_div">
-			<center>
-				<img class="interview" src="img/expert_circle.png" width="300px">
-				<div class="interview_words">
-					<h1>Expert Interview</h1>
-					<p>There is a vast amount of knowledge surrounding childhood
-						obesity that exists within the expertise of various educators,
-						health-care professionals, and program organizers. We reached out
-						to these experts to take advantage of the wealth of knowledge they
-						offered regarding person-person motivation, policy changes, and
-						education about childhood obesity.</p>
-				</div>
-			</center>
-		</span> <span class="interview_div">
-			<center>
-				<img class="interview" src="img/observation.png" width="300px">
-				<div class="interview_words">
-					<h1>Guerilla Observation</h1>
-					<p>We identified and visited several locations frequented by
-						families with young children. During these visits we paid close
-						attention to any critical nutritional and fitness choices that
-						were made at these locations, how each location affected those
-						choices, and the manner in which caretakers and children
-						communicated with one another.</p>
-				</div>
-			</center>
-		</span> <span class="interview_div">
-			<center>
-				<img class="interview" src="img/family_storytelling_circle.png"
-					width="300px">
-				<div class="interview_words">
-					<h1>Family Storytelling</h1>
-					<p>Our extensive literature review strongly suggested that a
-						family-centered solution was the most effective approach in the
-						fight against childhood obesity. With this in mind, we conducted a
-						series of activities with families that encouraged family members
-						to collaborate and walk us through specific stories from their
-						daily lives. These activities were designed to elicit information
-						regarding the day-to-day choices families made surrounding
-						nutrition and fitness.</p>
-				</div>
-			</center>
-		</span>
-	</div>
-	<a name="design"></a>
-	<div id="design">
-		<center><h1>Design Process</h1></center>
-	</div>
+	
 
 	<script type="text/javascript" src="js/jquery.js"></script>
 		<script type="text/javascript" src="js/bootstrap.js"></script>
