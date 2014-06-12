@@ -1,10 +1,10 @@
 body {
 	background-size: 100%;
-	min-height:700px;
 	margin: auto;
 	font-family: 'Lato', sans-serif;
 	font-size: 12pt;
 	color: #566473;
+	overflow-x: hidden;
 }
 /* OVERWRITE BOOTSTRAP */
 
@@ -17,7 +17,8 @@ body {
   text-align: center;
 }
 
-h1, h2{text-align: center;}
+h1, h2{text-align: center; font-weight: 200;}
+
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Lato', sans-serif;
 	text-transform: uppercase;
@@ -43,6 +44,7 @@ h3, .h3{
 	text-transform: uppercase;
 	font-size: 11pt;
 	text-shadow: 1px 1px 1px #3E8B8B;
+	border-bottom: 10px solid #fff;
 }
 
 #header li.active a, #header li.active a:hover {
@@ -85,24 +87,31 @@ h3, .h3{
 
 
 .jumbotron.title{
-	background-color: white;
+	background-color: #94d0cc;
 	position: relative;
 	top:60px;
 	z-index: -1;
+	text-align: center;
 }
+.jumbotron.title h3{
+	font-weight: 200;
+	color: #fff;
+}
+
 .jumbotron.fullheight{
 	min-height: 100vh;
 	margin-bottom: 0px;
-	position: relative;
+	/*position: relative;*/
 }
 
 .darkteal {
 	background-color: #4bc4c4;
 }
+.lighteal{}
 
 .jumbotron {font-size: 13pt;}
 .jumbotron.teal {
-	background-color: #B9E2DF;
+	background-color: #4bc4c4; /*#B9E2DF*/
 }
 .jumbotron, .container .jumbotron{
 	border-radius: 2px;
@@ -116,9 +125,22 @@ h3, .h3{
 	background-color: #fff;
 	overflow: hidden;
 }
-.goal{
-	
+.goal em{
+	font-size: 22px;
+	font-weight: 200;
+	text-align: center;
 
+}
+.joey-kite{
+	display: block;
+	background: url(../img/joey-kite-small.png) 0 0 no-repeat;
+	height: 190px;
+	width: 220px;
+	position: relative;
+	left: 40%;
+	margin-top: -119px;
+	z-index: 5;
+	margin-bottom: -40px;
 }
 
 .jumbotron .fullwidth{}
@@ -176,11 +198,11 @@ h3, .h3{
 }
 
 
-.newspaper{
+.outerTeal{
 /*	background: url(../img/research_books.jpg) no-repeat 0 0 #fff;
 */	background-size: cover;
 	padding-bottom: 0;
-	background-color: #B9E2DF; 
+	background-color: #94d0cc; 
 }
 
 
@@ -234,6 +256,7 @@ padding-bottom: 0;}
 }
 
 .researchBoxDark .circle{ border-color: #fff;}
+.researchBoxDark{background-color: #94d0cc;}
 .alignRight{
 	text-align: right;
 
@@ -253,13 +276,78 @@ padding-bottom: 0;}
 .centerLine{background: url(../img/sprites/line.png) repeat-y center transparent;}
 .darkteal .centerLine, .researchBoxDark .centerLine {background-image: url(../img/sprites/line-w.png);}
 .researchBox div{background-color: #fff;}
-.researchBoxDark  div {background-color: #4bc4c4; color: #fff;}
+.researchBoxDark  div {background-color: #94d0cc; color: #fff;}
 .researchBoxDark h3 {color: #fff;}
 .v-center{
 	position: relative;
-	top: 50%;
+	top: 20vh;
 	
-	-webkit-transform: translateY(-50%);
-  	-ms-transform: translateY(-50%);
-  	transform: translateY(-50%);
+	-webkit-transform: translateY(-20%);
+  	-ms-transform: translateY(-20%);
+  	transform: translateY(-20%);
+}
+
+.jumbotron.grass{
+	background-color: #8fc27d;
+	border-bottom: 10px solid #fff;
+	top: 120px;
+
+}
+.jumbotron.grass::before, .jumbotron.grass::after{
+	content: '';
+	display: block;
+	height: 120px;
+	width: 60%;
+	position: absolute;
+	top: -120px;
+	background-color: #8fc27d;
+	}
+
+.jumbotron.grass::before{
+	left: -10%;
+	border-radius: 100% 0 0 0;
+	}
+.jumbotron.grass::after{
+	right: -10%;
+	border-radius: 0 100% 0 0;
+	}
+
+.cloud{
+		display: block;
+		height: 200px;
+		width: 200px;
+		background: url("../img/cloud-small.png") no-repeat 0 0 transparent;
+		position: absolute;
+
+	}
+#cloud1{
+	top: 20px;
+	right: 1010px;
+	background: url("../img/cloud-medium.png") no-repeat 0 0 transparent;
+}
+#cloud2{
+	top: 150px;
+	right: 950px;
+}
+
+#cloud3{
+	top: 150px;
+	right: 0px;
+	
+}
+#cloud4{
+
+	top: 300px;
+	left: 950px;
+	
+}
+#cloud5{
+
+	top: 300px;
+	left: 0px;
+	
+}
+@media (max-width: 767px){
+	.cloud{display:none;}
+	.centerLine, .centerLine div, .centerLine p{text-align: center;}
 }
